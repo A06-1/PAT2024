@@ -36,14 +36,20 @@ public class StatisticScreen extends javax.swing.JFrame {
         LowestDemandedProductLabel = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         LowestDemandedProductTextArea = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Statistics:");
 
-        CurrentStockAvailableLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        CurrentStockAvailableLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         CurrentStockAvailableLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CurrentStockAvailableLabel.setText("Current Stock Available:");
 
@@ -51,7 +57,7 @@ public class StatisticScreen extends javax.swing.JFrame {
         CurrentStockAvailabeTextArea.setRows(5);
         jScrollPane1.setViewportView(CurrentStockAvailabeTextArea);
 
-        HighestDemandedProductsLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        HighestDemandedProductsLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         HighestDemandedProductsLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         HighestDemandedProductsLabel.setText("Highest Demanded Products:");
 
@@ -59,13 +65,21 @@ public class StatisticScreen extends javax.swing.JFrame {
         HighestDemandedProductTextArea.setRows(5);
         jScrollPane2.setViewportView(HighestDemandedProductTextArea);
 
-        LowestDemandedProductLabel.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        LowestDemandedProductLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         LowestDemandedProductLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LowestDemandedProductLabel.setText("Lowest Demanded Products:");
 
         LowestDemandedProductTextArea.setColumns(20);
         LowestDemandedProductTextArea.setRows(5);
         jScrollPane3.setViewportView(LowestDemandedProductTextArea);
+
+        jLabel2.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Results:");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane4.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,14 +94,16 @@ public class StatisticScreen extends javax.swing.JFrame {
                         .addGap(246, 246, 246)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(LowestDemandedProductLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(HighestDemandedProductsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                            .addComponent(CurrentStockAvailableLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(HighestDemandedProductsLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(CurrentStockAvailableLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
                             .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane3))))
-                .addContainerGap(306, Short.MAX_VALUE))
+                            .addComponent(jScrollPane3)
+                            .addComponent(jScrollPane4))))
+                .addContainerGap(278, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,9 +120,13 @@ public class StatisticScreen extends javax.swing.JFrame {
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(LowestDemandedProductLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(273, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(LowestDemandedProductLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -166,9 +186,12 @@ public class StatisticScreen extends javax.swing.JFrame {
     private javax.swing.JLabel LowestDemandedProductLabel;
     private javax.swing.JTextArea LowestDemandedProductTextArea;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }
