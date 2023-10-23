@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Product {
-    private int id;
+    private String type;
     private String name;
     private double price;
-    private int quantity;
+    private int quantity; 
 
-    public Product(int id, String name, double price, int quantity) {
-        this.id = id;
+    public Product(String type, String name, double price, int quantity) {
+        this.type = type;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -30,7 +30,7 @@ public class Stock {
     }
 
     public void removeProduct(int productId) {
-        products.removeIf(product -> product.getId() == productId);
+        products.removeIf(product -> product.getType() == productType);
     }
 
     // methods for managing the stock and the products+ stock class
