@@ -1,4 +1,6 @@
-public class Main {
+import java.util.ArrayList;
+import java.util.List;
+    public class Main { 
     public static void main(String[] args) {
         Stock stock = new Stock();
         Product product1 = new Product(1, "Product A", 10.0, 100);
@@ -14,8 +16,6 @@ public class Main {
 
         System.out.println("Total Stock Value: $" + totalValue);
         System.out.println("Available Products: " + availableProducts); 
-import java.util.ArrayList;
-import java.util.List;
 // File path for reading and writing
         String filePath = "example.txt";
 
@@ -92,27 +92,6 @@ public class Statistics {
 
     // Stats method and Stats Class
 } 
-public class Main {
-    public static void main(String[] args) {
-        Stock stock = new Stock();
-        Product product1 = new Product(1, "Product A", 10.0, 100);
-        Product product2 = new Product(2, "Product B", 15.0, 50);
-
-        stock.addProduct(product1);
-        stock.addProduct(product2);
-
-        Statistics statistics = new Statistics();
-
-        double totalValue = statistics.calculateTotalValue(stock);
-        int availableProducts = statistics.getAvailableProducts(stock);
-
-        System.out.println("Total Stock Value: $" + totalValue);
-        System.out.println("Available Products: " + availableProducts);
-    }
-} 
-
-
-
 } 
 
 
