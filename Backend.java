@@ -74,6 +74,37 @@ public class Main {
     }
 } 
 // main class to run the proeviously made methods
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileReadWriteExample {
+    public static void main(String[] args) {
+        // File path for reading and writing
+        String filePath = "example.txt";
+
+        // Writing to a text file
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            writer.write("Hello, this is a test line.");
+            writer.newLine(); // Add a newline
+            writer.write("This is another line.");
+        } catch (IOException e) {
+            System.err.println("Error writing to the file: " + e.getMessage());
+        }
+
+        // Reading from the text file
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath)) ) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.err.println("Error reading the file: " + e.getMessage());
+        }
+    }
+}
 
 } 
 
