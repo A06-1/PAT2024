@@ -80,7 +80,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileReadWriteExample {
+public class readAndWrite {
     public static void main(String[] args) {
         // File path for reading and writing
         String filePath = "example.txt";
