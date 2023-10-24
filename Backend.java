@@ -73,7 +73,7 @@ public class Main {
         System.out.println("Available Products: " + availableProducts);
     }
 } 
-// main class to run the proeviously made methods
+// main class to run the previously made methods
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
