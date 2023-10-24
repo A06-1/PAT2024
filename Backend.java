@@ -1,5 +1,21 @@
 
 public class Backend {
+public class Main {
+    public static void main(String[] args) {
+        Stock stock = new Stock();
+        Product product1 = new Product(1, "Product A", 10.0, 100);
+        Product product2 = new Product(2, "Product B", 15.0, 50);
+
+        stock.addProduct(product1);
+        stock.addProduct(product2);
+
+        Statistics statistics = new Statistics();
+
+        double totalValue = statistics.calculateTotalValue(stock);
+        int availableProducts = statistics.getAvailableProducts(stock);
+
+        System.out.println("Total Stock Value: $" + totalValue);
+        System.out.println("Available Products: " + availableProducts); 
 import java.util.ArrayList;
 import java.util.List;
 // File path for reading and writing
@@ -24,6 +40,8 @@ import java.util.List;
             System.err.println("Error reading the file: " + e.getMessage());
         }
     }
+    }
+
 public class Product {
     private String type;
     private String name;
