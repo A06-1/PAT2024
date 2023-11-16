@@ -1,3 +1,5 @@
+package UI;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -30,13 +32,11 @@ public class ManageStockScreen extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         StockTraitsList = new javax.swing.JList<>();
         AddItemsLabel = new javax.swing.JLabel();
-        RemoveItemsLabel = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         CurrentItemsQuantityTextArea = new javax.swing.JTextArea();
         ItemsQuantityLabel = new javax.swing.JLabel();
         StockHistoryLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        RemoveStockSpinner = new javax.swing.JSpinner();
         AddStockSpinner = new javax.swing.JSpinner();
         ProductNameLabel = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -56,10 +56,7 @@ public class ManageStockScreen extends javax.swing.JFrame {
         jScrollPane1.setViewportView(StockTraitsList);
 
         AddItemsLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        AddItemsLabel.setText("Add Stock:");
-
-        RemoveItemsLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        RemoveItemsLabel.setText("Remove Stock:");
+        AddItemsLabel.setText("Stock Change:");
 
         CurrentItemsQuantityTextArea.setEditable(false);
         CurrentItemsQuantityTextArea.setColumns(20);
@@ -113,13 +110,11 @@ public class ManageStockScreen extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(DateOfStockChangeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(ProductNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(RemoveItemsLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(AddItemsLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(ItemsQuantityLabel))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2)
-                                    .addComponent(RemoveStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(AddStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -142,14 +137,11 @@ public class ManageStockScreen extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(AddItemsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AddStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(RemoveItemsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(RemoveStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
+                                    .addComponent(AddItemsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(AddStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(33, 33, 33)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ProductNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -229,8 +221,6 @@ public class ManageStockScreen extends javax.swing.JFrame {
     private javax.swing.JLabel ItemsQuantityLabel;
     private javax.swing.JLabel ProductNameLabel;
     private javax.swing.JTextArea ProductNameTextArea;
-    private javax.swing.JLabel RemoveItemsLabel;
-    private javax.swing.JSpinner RemoveStockSpinner;
     private javax.swing.JLabel StockHistoryLabel;
     private javax.swing.JLabel StockManagerHeadingLabel;
     private javax.swing.JList<String> StockTraitsList;

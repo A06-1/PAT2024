@@ -1,3 +1,13 @@
+package UI;
+
+import Backend.ProductManager;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -14,6 +24,18 @@ public class MainMenuScreen extends javax.swing.JFrame {
      */
     public MainMenuScreen() {
         initComponents();
+        
+        try {
+            ArrayList<String> itemNames = ProductManager.getItemNames();
+            DefaultListModel model = new DefaultListModel();
+            model.addAll(itemNames);
+            ActionsListProductScreen.setModel(model);
+            
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(MainMenuScreen.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Product file not found");
+        }
     }
 
     /**
