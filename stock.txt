@@ -1,0 +1,8 @@
+Jacket#Nike#Clothing#240#12\06\2023#52
+AirMax#Nike#Shoes#1200#26\02\2024#49 
+Hoodie#Vans#Clothing#320#19\10\2023#67
+FootballBoots#Shoes#1100#22\06\2024#22
+Hat#BassProFishing#Accessory#30#09\11\2024#21
+Gloves#Yamaha#Accessory#280#10\05\2024#37
+WaterBottle#AirUp#Accessory#250#11\03\2023#50
+TennisRacket#Max#Equipment#1280#15\11\2023#12

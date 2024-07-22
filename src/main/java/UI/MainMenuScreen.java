@@ -1,6 +1,6 @@
 package UI;
 
-import Backend.ProductManager;
+import Backend.Managers.Productmanager;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -24,16 +24,10 @@ public class MainMenuScreen extends javax.swing.JFrame {
     public MainMenuScreen() {
         initComponents();
 
-        try {
-            ArrayList<String> itemNames = ProductManager.getItemNames();
-            DefaultListModel model = new DefaultListModel();
-            model.addAll(itemNames);
-            ActionsListProductScreen.setModel(model);
-
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(MainMenuScreen.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Product file not found");
-        }
+        ArrayList<String> itemNames = Productmanager.getItemNames();
+        DefaultListModel model = new DefaultListModel();
+        model.addAll(itemNames);
+        ActionsListProductScreen.setModel(model);
     }
 
     /**
@@ -299,27 +293,16 @@ public class MainMenuScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_ProductTotalStockTextFieldActionPerformed
 
     private void ActionsListProductScreenValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_ActionsListProductScreenValueChanged
-        try {
-            //here
-            String selectedItemName =  ActionsListProductScreen.getSelectedValue();
-            
-            String brandName = ProductManager.getBrand(selectedItemName);
-            BrandProductOutputText.setText(brandName);
-            
-//            String type = ProductManager.getType();
-            ProductTypeOutputText.setText(brandName);
-
-            int cost = ProductManager.getCost(selectedItemName); 
-            ProductCostOutputText.setText(cost); 
-            
-            String location = ProductManager.getLocation(selectedItemName); 
-            ProductStorageOutputText.setText(location);
-            
-            
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(MainMenuScreen.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Could not find product file");
-        }
+        //here
+        String selectedItemName =  ActionsListProductScreen.getSelectedValue();
+        String brandName = Productmanager.getBrand(selectedItemName);
+        BrandProductOutputText.setText(brandName);
+        //            String type = ProductManager.getType();
+        ProductTypeOutputText.setText(brandName);
+        int cost = Productmanager.getCost(selectedItemName);
+        
+        String location = Productmanager.getLocation(selectedItemName);
+        ProductStorageOutputText.setText(location);
         
         
     }//GEN-LAST:event_ActionsListProductScreenValueChanged

@@ -29,21 +29,21 @@ public class ManageStockScreen extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         StockManagerHeadingLabel = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        StockTraitsList = new javax.swing.JList<>();
-        AddItemsLabel = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        CurrentItemsQuantityTextArea = new javax.swing.JTextArea();
-        ItemsQuantityLabel = new javax.swing.JLabel();
-        StockHistoryLabel = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        AddStockSpinner = new javax.swing.JSpinner();
-        ProductNameLabel = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel4 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        ProductNameTextArea = new javax.swing.JTextArea();
-        DateOfStockChangeLabel = new javax.swing.JLabel();
+        jTextArea3 = new javax.swing.JTextArea();
+        jLabel5 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        DateOfStockChangeTextArea = new javax.swing.JTextArea();
+        jTextArea4 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,108 +53,122 @@ public class ManageStockScreen extends javax.swing.JFrame {
         StockManagerHeadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         StockManagerHeadingLabel.setText("Stock Manager:");
 
-        jScrollPane1.setViewportView(StockTraitsList);
-
-        AddItemsLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        AddItemsLabel.setText("Stock Change:");
-
-        CurrentItemsQuantityTextArea.setEditable(false);
-        CurrentItemsQuantityTextArea.setColumns(20);
-        CurrentItemsQuantityTextArea.setRows(5);
-        jScrollPane2.setViewportView(CurrentItemsQuantityTextArea);
-
-        ItemsQuantityLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        ItemsQuantityLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ItemsQuantityLabel.setText("Current Items Quantity:");
-
-        StockHistoryLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        StockHistoryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        StockHistoryLabel.setText("Stock History:");
-
         jButton1.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("Save");
 
-        ProductNameLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        ProductNameLabel.setText("Product Name:");
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
-        ProductNameTextArea.setColumns(20);
-        ProductNameTextArea.setRows(5);
-        jScrollPane3.setViewportView(ProductNameTextArea);
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Choose an item:");
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        DateOfStockChangeLabel.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        DateOfStockChangeLabel.setText("Date Of Stock Change:");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Name:");
 
-        DateOfStockChangeTextArea.setColumns(20);
-        DateOfStockChangeTextArea.setRows(5);
-        jScrollPane4.setViewportView(DateOfStockChangeTextArea);
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Description:");
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Date of Stock Exchange:");
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jScrollPane3.setViewportView(jTextArea3);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Quantity:");
+
+        jTextArea4.setColumns(20);
+        jTextArea4.setRows(5);
+        jScrollPane4.setViewportView(jTextArea4);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(StockHistoryLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(59, 59, 59))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(StockManagerHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(265, 265, 265)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(51, 51, 51)
-                                .addComponent(StockManagerHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(DateOfStockChangeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(ProductNameLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(AddItemsLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addComponent(ItemsQuantityLabel))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane2)
-                                    .addComponent(AddStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(185, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(59, 59, 59))))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
+                                .addComponent(jScrollPane3)
+                                .addComponent(jScrollPane4)))
+                        .addGap(534, 534, 534))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
+                .addComponent(StockManagerHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(StockManagerHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(StockHistoryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(342, 342, 342)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(27, 27, 27)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(AddItemsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(AddStockSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(33, 33, 33)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ProductNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(DateOfStockChangeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ItemsQuantityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(82, Short.MAX_VALUE))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(82, 82, 82))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,6 +190,10 @@ public class ManageStockScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,22 +231,22 @@ public class ManageStockScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AddItemsLabel;
-    private javax.swing.JSpinner AddStockSpinner;
-    private javax.swing.JTextArea CurrentItemsQuantityTextArea;
-    private javax.swing.JLabel DateOfStockChangeLabel;
-    private javax.swing.JTextArea DateOfStockChangeTextArea;
-    private javax.swing.JLabel ItemsQuantityLabel;
-    private javax.swing.JLabel ProductNameLabel;
-    private javax.swing.JTextArea ProductNameTextArea;
-    private javax.swing.JLabel StockHistoryLabel;
     private javax.swing.JLabel StockManagerHeadingLabel;
-    private javax.swing.JList<String> StockTraitsList;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextArea jTextArea4;
     // End of variables declaration//GEN-END:variables
 }
