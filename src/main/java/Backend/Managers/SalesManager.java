@@ -5,7 +5,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.Logger; 
+//made sales array of 1000+ can read it 
+
 
 public class SalesManager {
 
@@ -21,7 +23,7 @@ public class SalesManager {
                 Scanner lineScan = new Scanner(line).useDelimiter("#");
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Productmanager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

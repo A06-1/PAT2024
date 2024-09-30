@@ -1,33 +1,34 @@
 package Backend.DataTypes;
 
-import java.io.File;
-import java.util.Date;
-import java.util.Scanner;
+public class Product {
 
-class Product {
+    String productName;
+    String productBrand;
+    int productCost;
 
-    String[] productName = new String[100];
-    String[] productBrand = new String[100];
-    int[] productCost = new int[100];
-    Date[] productExchange = new Date[100];
+    public Product(String inPBName, String inPName, int inPC) {
+        this.productBrand = inPBName;
+        this.productCost = inPC;
+        this.productName = inPName;
+    }
 
-   
-   
-   
-   
-    
-    
-    public static String[] getProductName(String[] productName) {
+    public String getProductName() {
         return productName;
     }
-    public static String[] getProductBrand(String[] productBrand) {
+
+    public String getProductBrand() {
         return productBrand;
     }
-    public static int[] getProductCost(int[] productCost){
-        return productCost;
-    } 
-    public static Date[] getProductExchange(Date[] productExchange){
-        return productExchange;
-    } 
 
+    public int getProductCost() {
+        return productCost;
+    }
+
+    public String[] row() {
+        String[] row = new String[3];
+        row[0] = this.productName;
+        row[1] = this.productBrand;
+        row[2] = this.productCost + "";
+        return row;
+    }
 }

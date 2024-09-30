@@ -19,7 +19,7 @@ public class StatsManager {
                 Scanner lineScan = new Scanner(line).useDelimiter("#");
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Productmanager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProductManager.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
